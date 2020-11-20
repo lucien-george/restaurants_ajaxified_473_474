@@ -1,10 +1,5 @@
-puts 'Creating restaurants...'
-Restaurant.create!({
-  name: "Le Dindon en Laisse",
-  address: "18 Rue Beautreillis, 75004 Paris, France"
-})
-Restaurant.create!({
-  name: "Neuf et Voisins",
-  address: "Van Arteveldestraat 1, 1000 Brussels, Belgium"
-})
-puts 'Finished!'
+100.times do |i|
+  Restaurant.create name: Faker::Restaurant.name, address: Faker::Address.street_address
+  puts "#{(i + 1).ordinalize} restaurant created"
+  sleep 1
+end

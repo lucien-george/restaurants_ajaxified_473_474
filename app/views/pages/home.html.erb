@@ -1,2 +1,7 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="d-flex flex-column align-items-center justify-content-between mt-4" data-controller="counter">
+  <div class="counter">
+    <h1 class="rounded shadow-sm bg-primary text-white p-3" data-target="counter.restaurantCount"><%= @restaurant_count %></h1>
+  </div>
+
+  <button class="btn btn-outline-secondary" data-action="click->counter#refresh">Refresh counter</button>
+</div>
